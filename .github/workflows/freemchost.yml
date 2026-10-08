@@ -3,8 +3,7 @@ name: Freemchost Auto Renew & Keepalive
 on:
   workflow_dispatch:
   schedule:
-    # 每天北京时间 08:28 执行（对应 UTC 时间 00:28）
-    - cron: '28 0 * * *'
+    - cron: '1 0 * * *'
 
 # 保持单例运行，防止并发堆叠
 concurrency:
