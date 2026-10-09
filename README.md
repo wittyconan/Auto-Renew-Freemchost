@@ -8,7 +8,7 @@
 ━━━━━━━━━━━━━━━━━━━━━━
 
 ### 🔐 Secrets 配置说明
-| Secret 名称 | <span style="white-space:nowrap">是否必填&nbsp;✅</span> | 说明 |
+| Secret 名称 | &emsp;&emsp;是否必填&nbsp;✅&emsp;&emsp; | 说明 |
 | :--- | :---: | :--- |
 | FREE_EMAIL | ✅ 必填 | 登录邮箱 |
 | FREE_PASSWORD | ✅ 必填 | 登录密码 |
