@@ -8,14 +8,48 @@
 ━━━━━━━━━━━━━━━━━━━━━━
 
 ### 🔐 Secrets 配置说明
-| Secret 名称 | &emsp;&emsp;是否必填&nbsp;✅&emsp;&emsp; | 说明 |
-| :--- | :---: | :--- |
-| FREE_EMAIL | ✅ 必填 | 登录邮箱 |
-| FREE_PASSWORD | ✅ 必填 | 登录密码 |
-| SERVER_PAGE_URL | ✅ 必填 | 服务器控制台链接如 [freemchost 控制台](https://freemchost.com/app/servers/7f2d81a4-26c3-49e7-950b-4c82f16d7039) |
-| NODE_LINK | ❌ 可选 | 代理链接（如 vless:// vmess:// trojan:// hysteria2// tuic:// anytls:// socks5://） |
-| TG_BOT_TOKEN | ❌ 可选 | Telegram Bot Token（用于发送通知） |
-| TG_CHAT_ID | ❌ 可选 | Telegram Chat ID（接收通知的用户或群组 ID） |
+
+<table>
+  <thead>
+    <tr>
+      <th align="left" width="25%">Secret 名称</th>
+      <th align="center" width="20%" nowrap>是否必填 ✅</th>
+      <th align="left">说明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>FREE_EMAIL</td>
+      <td align="center">✅ 必填</td>
+      <td>登录邮箱</td>
+    </tr>
+    <tr>
+      <td>FREE_PASSWORD</td>
+      <td align="center">✅ 必填</td>
+      <td>登录密码</td>
+    </tr>
+    <tr>
+      <td>SERVER_PAGE_URL</td>
+      <td align="center">✅ 必填</td>
+      <td>服务器控制台链接如 <a href="https://freemchost.com/app/servers/7f2d81a4-26c3-49e7-950b-4c82f16d7039">freemchost 控制台</a></td>
+    </tr>
+    <tr>
+      <td>NODE_LINK</td>
+      <td align="center">❌ 可选</td>
+      <td>代理链接（如 vless:// vmess:// trojan:// hysteria2// tuic:// anytls:// socks5://）</td>
+    </tr>
+    <tr>
+      <td>TG_BOT_TOKEN</td>
+      <td align="center">❌ 可选</td>
+      <td>Telegram Bot Token（用于发送通知）</td>
+    </tr>
+    <tr>
+      <td>TG_CHAT_ID</td>
+      <td align="center">❌ 可选</td>
+      <td>Telegram Chat ID（接收通知的用户或群组 ID）</td>
+    </tr>
+  </tbody>
+</table>
 
 ━━━━━━━━━━━━━━━━━━━━━━
 
