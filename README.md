@@ -9,14 +9,14 @@
 
 ### 🔐 Secrets 配置说明
 
-| Secret 名称         | 是否必填 | 说明                                              |
-|---------------------|----------|---------------------------------------------------|
-| FREE_EMAIL        | ✅ 必填  | 登录邮箱                          |
-| FREE_PASSWORD     | ✅ 必填  | 登录密码                          |
-| SERVER_PAGE_URL   | ✅ 必填  | 服务器控制台链接,如（https://freemchost.com/app/servers/7f2d81a4-26c3-49e7-950b-4c82f16d7039）        |
-| NODE_LINK         | ❌ 可选  | 代理链接（如 vless:// vmess:// trojan:// hysteria2:// tuic:// anytls:// socks5:// )|
-| TG_BOT_TOKEN      | ❌ 可选  | Telegram Bot Token（用于发送通知）       |
-| TG_CHAT_ID        | ❌ 可选  | Telegram Chat ID（接收通知的用户或群组 ID） |    
+| Secret 名称         |  是否必填  | 说明                                              |
+|---------------------|------------|---------------------------------------------------|
+| FREE_EMAIL        |  ✅ 必填   | 登录邮箱                          |
+| FREE_PASSWORD     |  ✅ 必填   | 登录密码                          |
+| SERVER_PAGE_URL   |  ✅ 必填   | 服务器控制台链接,如（https://freemchost.com/app/servers/7f2d81a4-26c3-49e7-950b-4c82f16d7039）        |
+| NODE_LINK         |  ❌ 可选   | 代理链接（如 vless:// vmess:// trojan:// hysteria2:// tuic:// anytls:// socks5:// )|
+| TG_BOT_TOKEN      |  ❌ 可选   | Telegram Bot Token（用于发送通知）       |
+| TG_CHAT_ID        |  ❌ 可选   | Telegram Chat ID（接收通知的用户或群组 ID） |    
 
 ━━━━━━━━━━━━━━━━━━━━━━
 
