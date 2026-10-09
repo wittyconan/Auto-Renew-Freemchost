@@ -9,7 +9,7 @@
 
 ### 🔐 Secrets 配置说明
 
-| Secret 名称 | 是否必填✅ | 说明 |
+| Secret 名称 | 是否必填✅     | 说明 |
 | --- | --- | --- |
 | FREE_EMAIL | ✅ 必填 | 登录邮箱 |
 | FREE_PASSWORD | ✅ 必填 | 登录密码 |
