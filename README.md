@@ -8,15 +8,49 @@
 ━━━━━━━━━━━━━━━━━━━━━━
 
 ### 🔐 Secrets 配置说明
+<table>
+  <thead>
+    <tr>
+      <th>Secret 名称</th>
+      <!-- 重点：固定最小宽度+禁止换行，解决表头折行 -->
+      <th style="min-width:125px; white-space: nowrap;">是否必填✅</th>
+      <th>说明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>FREE_EMAIL</td>
+      <td style="white-space: nowrap;">✅ 必填</td>
+      <td>登录邮箱</td>
+    </tr>
+    <tr>
+      <td>FREE_PASSWORD</td>
+      <td style="white-space: nowrap;">✅ 必填</td>
+      <td>登录密码</td>
+    </tr>
+    <tr>
+      <td>SERVER_PAGE_URL</td>
+      <td style="white-space: nowrap;">✅ 必填</td>
+      <td>服务器控制台链接如 https://freemchost.com/app/servers/7f2d81a4-26c3-49e7-950b-4c82f16d7039</td>
+    </tr>
+    <tr>
+      <td>NODE_LINK</td>
+      <td style="white-space: nowrap;">❌ 可选</td>
+      <td>代理链接（如 vless:// vmess:// trojan:// hysteria2// tuic:// anytls:// socks5://）</td>
+    </tr>
+    <tr>
+      <td>TG_BOT_TOKEN</td>
+      <td style="white-space: nowrap;">❌ 可选</td>
+      <td>Telegram Bot Token（用于发送通知）</td>
+    </tr>
+    <tr>
+      <td>TG_CHAT_ID</td>
+      <td style="white-space: nowrap;">❌ 可选</td>
+      <td>Telegram Chat ID（接收通知的用户或群组 ID）</td>
+    </tr>
+  </tbody>
+</table>
 
-| Secret 名称 | 是否必填✅     | 说明 |
-| --- | --- | --- |
-| FREE_EMAIL | ✅ 必填 | 登录邮箱 |
-| FREE_PASSWORD | ✅ 必填 | 登录密码 |
-| SERVER_PAGE_URL | ✅ 必填 | 服务器控制台链接如 https://freemchost.com/app/servers/7f2d81a4-26c3-49e7-950b-4c82f16d7039 |
-| NODE_LINK | ❌ 可选 | 代理链接（如 vless:// vmess:// trojan:// hysteria2// tuic:// anytls:// socks5://） |
-| TG_BOT_TOKEN | ❌ 可选 | Telegram Bot Token（用于发送通知） |
-| TG_CHAT_ID | ❌ 可选 | Telegram Chat ID（接收通知的用户或群组 ID） |
 
 ━━━━━━━━━━━━━━━━━━━━━━
 
