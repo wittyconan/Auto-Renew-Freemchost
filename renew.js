@@ -191,7 +191,9 @@ await cleanPopup(page);
 // 提取当前实时的倒计时数据
 async function extractExpiryTime(page, maxTries = 5) {
 for (let retry = 0; retry < maxTries; retry++) {
-const result = await page.evaluate(() => {
+let result = null;
+try {
+result = await page.evaluate(() => {
 const allEls = Array.from(document.querySelectorAll('*'));
 const header = allEls.find(el => el && el.textContent && el.textContent.trim().toUpperCase().includes('TIME UNTIL EXPIRY'));
 if (header) {
@@ -221,6 +223,9 @@ return { totalHours: d * 24 + h + min / 60, raw: `${d}天${h}小时${min}分`};
 }
 return null;
 });
+} catch (e) {
+console.log(`⏳ 倒计时读取遇到页面跳转，重试 ${retry + 1}/${maxTries}...`);
+}
 
 if (result) return result;
 await page.waitForTimeout(1000);
@@ -388,12 +393,21 @@ await page.waitForTimeout(150);
 await page.mouse.up();
 }
 
-// 方案 2: 原生 click + 键盘 Enter / Space
+// 方案 2: 原生 click + 键盘 Enter / Space（已抓到 RPC 说明方案 1 已命中，跳过，避免重复提交）
+try {
+if (!actionRpcTriggered) {
 await targetOption.click({ delay: 80}).catch(() => {});
 await page.keyboard.press('Enter');
 await page.keyboard.press('Space');
+}
+} catch (e) {}
 
-// 方案 3: 触发父级表单直接提交
+// 给 RPC 一点落地时间，再判断要不要上方案 3
+await page.waitForTimeout(500);
+
+// 方案 3: 触发父级表单直接提交（已抓到 RPC 则跳过；续期成功后页面会导航，evaluate 遇到跳转是正常现象，不当错误抛）
+if (!actionRpcTriggered) {
+try {
 await page.evaluate(() => {
 const cardEl = Array.from(document.querySelectorAll('*')).find(el => (el.textContent || '').includes('60 hours'));
 if (cardEl) {
@@ -402,6 +416,13 @@ if (form) form.requestSubmit();
 cardEl.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true}));
 }
 });
+} catch (e) {
+console.log('ℹ️ 方案 3 遇到页面跳转，属续期成功后的正常刷新，继续核对');
+}
+}
+
+// 续期成功后页面可能导航/刷新，等它落定再往下走
+await page.waitForLoadState('domcontentloaded').catch(() => {});
 
 // 等待发包确认
 for (let waitSec = 0; waitSec < 6; waitSec++) {
